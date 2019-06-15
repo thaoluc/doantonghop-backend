@@ -1,0 +1,15 @@
+D:\DoAnTongHop\RollCallApp\RollCallApp\bin\Debug\netcoreapp2.2\RollCallApp.deps.json
+D:\DoAnTongHop\RollCallApp\RollCallApp\bin\Debug\netcoreapp2.2\RollCallApp.runtimeconfig.json
+D:\DoAnTongHop\RollCallApp\RollCallApp\bin\Debug\netcoreapp2.2\RollCallApp.runtimeconfig.dev.json
+D:\DoAnTongHop\RollCallApp\RollCallApp\bin\Debug\netcoreapp2.2\RollCallApp.dll
+D:\DoAnTongHop\RollCallApp\RollCallApp\bin\Debug\netcoreapp2.2\RollCallApp.pdb
+D:\DoAnTongHop\RollCallApp\RollCallApp\obj\Debug\netcoreapp2.2\RollCallApp.csprojAssemblyReference.cache
+D:\DoAnTongHop\RollCallApp\RollCallApp\obj\Debug\netcoreapp2.2\RollCallApp.csproj.CoreCompileInputs.cache
+D:\DoAnTongHop\RollCallApp\RollCallApp\obj\Debug\netcoreapp2.2\RollCallApp.RazorAssemblyInfo.cache
+D:\DoAnTongHop\RollCallApp\RollCallApp\obj\Debug\netcoreapp2.2\RollCallApp.RazorAssemblyInfo.cs
+D:\DoAnTongHop\RollCallApp\RollCallApp\obj\Debug\netcoreapp2.2\RollCallApp.AssemblyInfoInputs.cache
+D:\DoAnTongHop\RollCallApp\RollCallApp\obj\Debug\netcoreapp2.2\RollCallApp.AssemblyInfo.cs
+D:\DoAnTongHop\RollCallApp\RollCallApp\obj\Debug\netcoreapp2.2\RollCallApp.RazorTargetAssemblyInfo.cache
+D:\DoAnTongHop\RollCallApp\RollCallApp\obj\Debug\netcoreapp2.2\RollCallApp.dll
+D:\DoAnTongHop\RollCallApp\RollCallApp\obj\Debug\netcoreapp2.2\RollCallApp.pdb
+D:\DoAnTongHop\RollCallApp\RollCallApp\bin\Debug\netcoreapp2.2\RollCallApp.xml
