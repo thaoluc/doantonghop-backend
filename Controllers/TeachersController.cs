@@ -41,13 +41,7 @@ namespace RollCallApp.Controllers
 
         public IActionResult SearchTeacher(string keyWord)
         {
-           /* if (String.IsNullOrEmpty(keyWord)) //nội dung truyền vào nếu null or empty
-                return Ok("Empty");
-            if (context.Teachers.Find(keyWord) == null)
-            {
-                return Ok("Null");
-            }*/
-            //tìm gv theo nội dung truyền vào của gv
+          
          
             return Ok(context.Teachers.Where(s => s.ProfileId.Contains(keyWord)
             || s.TeacherId.Contains(keyWord)));

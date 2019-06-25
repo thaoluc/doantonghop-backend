@@ -33,7 +33,7 @@ namespace RollCallApp.Models
             if (!optionsBuilder.IsConfigured)
             {
                // optionsBuilder.UseSqlServer(@"Server=tcp:sqlrollcall.database.windows.net,1433;Database=RollCallDB;User Id=thaoluc;Password=Zelda20297;");
-                optionsBuilder.UseSqlServer(@"Server=tcp:sqlrollcall.database.windows.net,1433;Initial Catalog=RollCallDB;Persist Security Info=False;User ID=thaoluc;Password=Zelda20297;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+               optionsBuilder.UseSqlServer(@"Server=tcp:sqlrollcall.database.windows.net,1433;Initial Catalog=RollCallDB;Persist Security Info=False;User ID=thaoluc;Password=Zelda20297;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
                // optionsBuilder.UseSqlServer(@"Server=DESKTOP-L5E5FH3\SQLEXPRESS;Database=RollCallDB;User ID=sa; Password=123456;");
             }
         }

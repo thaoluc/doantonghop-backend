@@ -35,21 +35,14 @@ namespace RollCallApp.Controllers
         [Route("SearchRegisterSubject/{keyWord}")]
         public IActionResult SearchRegisterSubject(string keyWord)
         {
-           /* if (String.IsNullOrEmpty(keyWord))
-            {
-                return Ok("Empty");
-            }
-            if (context.RegisterSubjects.Find(keyWord) == null)
-            {
-                return Ok("Null");
-            }*/
+       
 
             return Ok(context.RegisterSubjects.Where(s => s.RegisterId.Contains(keyWord)
                                                         || s.StudentId.Contains(keyWord)
                                                         || s.SubjectId.Contains(keyWord)
                                                         || s.TeacherId.Contains(keyWord)
                                                         || s.DateStart.Contains(keyWord)
-                                                        || s.DateEnd.Contains(keyWord)).Count());
+                                                        || s.DateEnd.Contains(keyWord)));
         }
 
         [HttpPut]

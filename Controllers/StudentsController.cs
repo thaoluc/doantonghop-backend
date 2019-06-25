@@ -108,7 +108,7 @@ namespace RollCallApp.Controllers
         [Route("FindStudent/{id}")]
         public IActionResult Find(string id)
         {
-            if (context.Teachers.Find(id) == null)
+            if (context.Students.Find(id) == null)
             {
                 return Ok("Null");
             }

@@ -36,16 +36,9 @@ namespace RollCallApp.Controllers
         [Route("SearchSubject/{keyWord}")]
         public IActionResult SearchByKeyword (string keyWord)
         {
-            /*if (String.IsNullOrEmpty(keyWord))
-            {
-                return Ok("Empty");
-            }
-            if (context.Subjects.Find(keyWord) == null)
-            {
-                return Ok("Null");
-            }*/
+           
 
-            return Ok(context.Subjects.Where(s => s.SubjectId.Contains(keyWord) || s.SubjectName.Contains(keyWord)).Count());
+            return Ok(context.Subjects.Where(s => s.SubjectId.Contains(keyWord) || s.SubjectName.Contains(keyWord)));
         }
 
         [HttpDelete]

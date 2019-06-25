@@ -21,7 +21,7 @@ namespace RollCallApp.Controllers
         {
             var entity = context.Students.FirstOrDefault(e => e.StudentId.Equals(studentID));   //tìm sinh viên (theo id sv)
 
-            if (entity != null) //nếu có
+            if (entity != null) 
             {
                 try
                 {
