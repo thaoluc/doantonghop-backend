@@ -22,6 +22,7 @@ namespace RollCallApp.Controllers
         {
             try
             {
+                notification.Id = Guid.NewGuid() + "";
                 context.Notifications.Add(notification);
                 context.SaveChanges();
 

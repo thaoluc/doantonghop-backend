@@ -61,6 +61,7 @@ namespace RollCallApp.Controllers
         {
             try
             {
+                contact.Id = Guid.NewGuid() + "";
                 context.Contacts.Add(contact);
                 context.SaveChanges();
                 return Ok(true);

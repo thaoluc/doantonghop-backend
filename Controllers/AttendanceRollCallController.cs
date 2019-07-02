@@ -22,6 +22,7 @@ namespace RollCallApp.Controllers
         {
             try
             {
+                attendanceRollCall.Id = Guid.NewGuid() + "";
                 context.AttendanceRollCalls.Add(attendanceRollCall);
                 context.SaveChanges();
 
@@ -63,7 +64,7 @@ namespace RollCallApp.Controllers
 
                                        where register_subject.SubjectId == subjectID
                                        where register_subject.TeacherId == teacherID
-                          //         where attendance.DateCheck == DateTime.Now.ToString("dd/MM/yyyy") //DateTime được set thông tin ngày tháng thời gian hiện tại theo máy tính địa phương.
+                                       where attendance.DateCheck == DateTime.Now.ToString("dd/MM/yyyy") //DateTime được set thông tin ngày tháng thời gian hiện tại theo máy tính địa phương.
                                        where attendance.CheckAttendance == "1"
 
                                        select profile_student.ProfileId).ToList();
@@ -217,14 +218,7 @@ namespace RollCallApp.Controllers
         [Route("SearchAttendanceRollCall/{keyWord}")]
         public IActionResult SearchAttendanceRollCall(string keyWord)
         {
-          /*  if (String.IsNullOrEmpty(keyWord))
-            {
-                return Ok("Empty");
-            }
-            if (context.AttendanceRollCalls.Find(keyWord) == null)
-            {
-                return Ok("Null");
-            }*/
+        
 
             return Ok(context.AttendanceRollCalls.Where(s => s.CheckAttendance.Contains(keyWord)
                                                         || s.DateCheck.Contains(keyWord)
