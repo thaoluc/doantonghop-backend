@@ -42,9 +42,11 @@ namespace RollCallApp.Controllers
         {
             var listDD =
             (from reg_subject in context.RegisterSubjects join subject in context.Subjects
-             on reg_subject.SubjectId equals subject.SubjectId
+                on reg_subject.SubjectId equals subject.SubjectId
+                join teacher in context.Teachers on reg_subject.TeacherId equals teacher.TeacherId
+                join profile_teacher in context.ProfileTeachers on teacher.ProfileId equals profile_teacher.ProfileId
 
-             where reg_subject.TeacherId == teacherID
+             where profile_teacher.ProfileId == teacherID
 
              select subject
             ).Distinct().ToList();
