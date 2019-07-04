@@ -54,6 +54,22 @@ namespace RollCallApp.Controllers
         }
 
         [HttpGet]
+        [Route("getListSubjectOfTeacherID/teacherID")]
+        //truyền vào id GV --> lấy ra danh sách môn học mà GV đó dạy
+        public IActionResult getListSubjectOfTeacherID(string teacherID)
+        {
+            var listDD =
+            (from reg_subject in context.RegisterSubjects join subject in context.Subjects
+                     on reg_subject.SubjectId equals subject.SubjectId
+
+             where reg_subject.TeacherId == teacherID
+
+             select subject
+            ).Distinct().ToList();
+            return Ok(listDD);
+        }
+
+        [HttpGet]
         [Route("loadListStudentBySubjectAndTeacher/teacherID/subjectID")]
         //truyền vào gv, môn học --> lấy ra danh sách sv của gv dạy môn học đó
         public IActionResult LoadListAttend(string teacherID, string subjectID)
