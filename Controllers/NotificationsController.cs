@@ -166,12 +166,15 @@ namespace RollCallApp.Controllers
             //join noti vs teacher (teacherid equals teacherid)
             //lấy tất cả notification dựa trên subjectID và teacherID truyền vào có trong noti
             var listNoti = (from noti in context.Notifications join subject in context.Subjects
-                            on noti.SubjectId equals subject.SubjectId
+                                on noti.SubjectId equals subject.SubjectId
 
-                            join teacher in context.Teachers
-                            on noti.TeacherId equals teacher.TeacherId
+                                join teacher in context.Teachers
+                                on noti.TeacherId equals teacher.TeacherId
 
-                            where noti.TeacherId == teacherID
+                                join profile_teacher in context.ProfileTeachers
+                                on teacher.ProfileId equals profile_teacher.ProfileId
+
+                            where teacher.ProfileId == teacherID
                             where noti.SubjectId == subjectID
 
                             select noti).Distinct().ToList();
