@@ -347,7 +347,7 @@ namespace RollCallApp.Controllers
                      where at.DateCheck == dateCheck
                      where at.CheckAttendance == "1"
 
-                     select new { stu, at.CheckAttendance }
+                     select new { pro_stu, at.CheckAttendance }
                     ).Distinct().ToList();
                     return Ok(listDD);
 
@@ -366,7 +366,7 @@ namespace RollCallApp.Controllers
                      where at.DateCheck == dateCheck
                      where at.CheckAttendance == "0"
 
-                     select new { stu, at.CheckAttendance }
+                     select new { pro_stu, at.CheckAttendance }
                     ).Distinct().ToList();
                     return Ok(listCDD.ToList());
 
@@ -385,7 +385,7 @@ namespace RollCallApp.Controllers
                      where at.DateCheck == dateCheck
                      where at.CheckAttendance == "0" || at.CheckAttendance == "1"
 
-                     select new { stu, at.CheckAttendance }
+                     select new { pro_stu, at.CheckAttendance }
                     ).Distinct().ToList();
                     return Ok(listALL.ToList());
 
